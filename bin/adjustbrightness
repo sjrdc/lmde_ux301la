@@ -1,0 +1,9 @@
+#!/bin/bash
+
+brightness=$1
+if [ -z $brightness ]; then
+    brightness=200
+fi
+
+echo $brightness > /sys/class/backlight/intel_backlight/brightness
+
